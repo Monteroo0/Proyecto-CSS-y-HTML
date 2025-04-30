@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto</title>
 
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -88,6 +90,26 @@
       object-fit: cover;
     }
 
+    .sticker {
+      position: absolute;
+      bottom: -70px;
+      right: 270px;
+      height: 20vh;
+      width: 20vh;
+      overflow: hidden;
+      border-radius: 45%;
+      border: 2px solid rgba(255, 255, 255, 0);
+      z-index: 1;
+      transform: rotate(180deg);
+    }
+
+    .sticker img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
     .aboutme {
       font-family: 'Gulfs Display', sans-serif;
       background-color: #FFF35F;
@@ -134,8 +156,11 @@
       <img src="img/5fcb347779d1ee77b54fd806_6016106-R1-E009.jpg" alt="">
     </div>
     <div class="adorno1">
-        <img src="img/5fc5bd55289f5713c1684ca5_hero-large-shape.svg" alt="">
-      </div>
+      <img src="img/5fc5bd55289f5713c1684ca5_hero-large-shape.svg" alt="">
+    </div>
+    <div class="sticker">
+      <img src="img/60775529fa8ba96b3888b03f_hero_circle-new-01.png" alt="">
+    </div>
   </section>
 
   <section class="aboutme">
@@ -143,4 +168,5 @@
     </div>
   </section>
 </body>
+
 </html>
