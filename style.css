@@ -446,11 +446,10 @@ nav {
       "s1 s1 s3 s4 s5"
       "s2 s2 s3 s4 s5"
       "s6 s7 s7 s8 s8"
-      "s6 s7 s7 s9 s9"; /* Definir la cuadrícula */
+      "s6 s7 s7 s9 s9";
     overflow: hidden; /* Evitar desbordamiento */
   }
   
-  /* Estilos generales para los recuadros */
   .seccion-pedido div {
     border: 1px solid black; /* Borde negro de 1px */
     box-sizing: border-box; /* Incluir borde en el tamaño */
@@ -468,10 +467,16 @@ nav {
     color: #FF6545;
     background-color: #FFB4CE;
   }
+
   
   .s2 {
     grid-area: s2;
     background-color: #FFB4CE;
+    position: relative; /* Para posicionar el número 3 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black; /* Mantener el borde en s2 */
   }
   
   .s3 {
@@ -509,6 +514,240 @@ nav {
     background-color: #FFB4CE;
   }
   
+  .menuimg {
+    height: 20px;
+    margin: 0 10px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el contenido de s2 */
+  .seccion-pedido {
+    width: 100vw; /* 100% del ancho de la pantalla */
+    height: 100vh; /* 100% del alto de la pantalla */
+    background-color: white; /* Fondo blanco */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    grid-template-rows: repeat(4, 1fr); /* 4 filas */
+    grid-template-areas: 
+      "s1 s1 s3 s4 s5"
+      "s2 s2 s3 s4 s5"
+      "s6 s7 s7 s8 s8"
+      "s6 s7 s7 s9 s9";
+    overflow: hidden; /* Evitar desbordamiento */
+  }
+  
+  .seccion-pedido div {
+    border: 1px solid black; /* Borde negro de 1px */
+    box-sizing: border-box; /* Incluir borde en el tamaño */
+  }
+  
+  /* Eliminar bordes negros de todos los elementos dentro de s2 */
+  .s2 div {
+    border: none !important; /* Sobreescribir el borde negro */
+  }
+  
+  /* Asignación de áreas */
+  .s1 {
+    font-family: 'Gulfs Display', sans-serif;
+    grid-area: s1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7vh;
+    line-height: 7vh;
+    color: #FF6545;
+    background-color: #FFB4CE;
+  }
+  
+  .s2 {
+    grid-area: s2;
+    background-color: #FFB4CE;
+    position: relative; /* Para posicionar el número 3 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black; /* Mantener el borde en s2 */
+  }
+  
+  .s3 {
+    grid-area: s3;
+    font-family: 'Gulfs Display', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+    line-height: 5vh;
+    background-color: #FFF460;
+  }
+  
+  .s4 {
+    grid-area: s4;
+    font-family: 'Gulfs Display', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+    line-height: 5vh;
+    background-color: #FFFFFF;
+  }
+  
+  .s5 {
+    grid-area: s5;
+    background-color: #035DFF;
+  }
+  
+  .s6 {
+    grid-area: s6;
+    background-color: #FFF460;
+  }
+  
+  .s7 {
+    grid-area: s7;
+    background-color: #000000;
+  }
+  
+  .s8 {
+    grid-area: s8;
+    background-color: #FF6541;
+  }
+  
+  .s9 {
+    grid-area: s9;
+    background-color: #FFB4CE;
+  }
+  
+  .menuimg {
+    height: 20px;
+    margin: 0 10px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el contenido de s2 */
+  .contenido-s2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px; /* Espacio interno para que no toque los bordes */
+    box-sizing: border-box;
+    border: none; /* Sin borde */
+  }
+  
+  .horas-totales {
+    font-family: 'Gulfs Display', sans-serif;
+    font-size: 5vh;
+    color: #0061FF; /* Azul como en la imagen */
+    text-align: center;
+    margin-bottom: 50px;
+    margin-right: 120px;
+    line-height: 1; /* Reducir interlineado */
+    border: none; /* Sin borde */
+  }
+  
+  .circulo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border: none; /* Sin borde */
+  }
+  
+  .circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none; /* Sin borde */
+  }
+  
+  .slider {
+    width: 80%;
+    height: 15px;
+    background-color: transparent;
+    position: relative;
+    border: none; /* Sin borde */
+  }
+  
+  .slider-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #FFD700; /* Amarillo */
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid black; /* Borde negro */
+  }
+  
+  .slider-bola {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    border: none; /* Sin borde */
+  }
+  
+  .numero {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #0061FF; /* Azul */
+    color: white;
+    font-family: 'Gulfs Display', sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid black; /* Mantener el borde negro */
+  }
+  
+  /* Estilos para el contenido de s3 */
+  .contenido-s3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box;
+    text-align: center; /* Centrar el texto */
+    color: #FF7644;
+  }
+  
+  .sesiones-imagen {
+    width: 200px; /* Ajusta según el tamaño de tu imagen */
+    height: 124px;
+    margin-top: 10px; /* Espacio entre el texto y la imagen */
+    object-fit: cover;
+  }
+
+  .contenido-s4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box;
+    text-align: center; /* Centrar el texto */
+    color: #045EFF;
+  }
+
 .menuimg {
   height: 20px;
   margin: 0 10px;
