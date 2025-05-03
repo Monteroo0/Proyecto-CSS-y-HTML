@@ -220,6 +220,7 @@ nav {
     position: relative;
     background-color: #FFF35F;
     border-top: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 70px;
     font-family: 'Gulfs Display', sans-serif;
     display: flex;
@@ -348,7 +349,165 @@ nav {
     height: 100%;
     object-fit: cover;
   }
+
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual ancho */
+    grid-template-rows: repeat(2, auto); /* Forzar solo 2 filas */
+    gap: 4vh;
+    width: 110vw; /* Ancho original */
+    padding: 5vh;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box; /* Evitar que el padding afecte el ancho total */
+  }
   
+  /* Fondo rojo desde la mitad de la segunda fila */
+  .galeria-grid::before {
+    content: '';
+    position: absolute;
+    top: calc(55vh + 4vh + 27.5vh); /* Primera fila (55vh) + gap (4vh) + mitad de segunda fila (27.5vh) */
+    left: 0;
+    width: 110vw; /* Cubrir todo el ancho de la galería */
+    height: calc(100% - (55vh + 4vh + 27.5vh)); /* Desde la mitad de la segunda fila hasta el final */
+    background: #FF6541; /* Fondo rojo sólido */
+    z-index: -1; /* Detrás de las fotos */
+  }
+  
+  /* Estilos de las fotos (sin cambios) */
+  .photo {
+    height: 55vh;
+    overflow: hidden;
+    border-radius: 15%;
+    border: 2px solid black;
+    position: relative;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .photo.wide {
+    grid-column: span 2; /* Ocupa 2 columnas */
+    height: 55vh;
+  }
+  
+  /* Foto 5 se sale del margen */
+  .photo:nth-child(5) {
+    margin-right: -8vh; /* Foto 5 se sale a la derecha */
+  }
+  
+  /* Forzar la disposición en dos filas */
+  .photo:nth-child(1),
+  .photo:nth-child(2),
+  .photo:nth-child(3),
+  .photo:nth-child(4),
+  .photo:nth-child(5) {
+    grid-row: 1; /* Primera fila */
+  }
+  
+  .photo:nth-child(6),
+  .photo:nth-child(7),
+  .photo:nth-child(8),
+  .photo:nth-child(9) {
+    grid-row: 2; /* Segunda fila */
+  }
+  
+  /* Recuadro rojo alrededor de las fotos (sin cambios) */
+  .photo::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 2px solid #FF6541; /* Recuadro rojo alrededor de cada foto */
+    border-radius: 15%;
+    z-index: -1;
+    margin-bottom: 1px solid black;
+  }
+  
+  /* Evitar scroll horizontal */
+  body {
+    overflow-x: hidden;
+  }
+
+  .seccion-pedido {
+    width: 100vw; /* 100% del ancho de la pantalla */
+    height: 100vh; /* 100% del alto de la pantalla */
+    background-color: white; /* Fondo blanco */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    grid-template-rows: repeat(4, 1fr); /* 4 filas */
+    grid-template-areas: 
+      "s1 s1 s3 s4 s5"
+      "s2 s2 s3 s4 s5"
+      "s6 s7 s7 s8 s8"
+      "s6 s7 s7 s9 s9"; /* Definir la cuadrícula */
+    overflow: hidden; /* Evitar desbordamiento */
+  }
+  
+  /* Estilos generales para los recuadros */
+  .seccion-pedido div {
+    border: 1px solid black; /* Borde negro de 1px */
+    box-sizing: border-box; /* Incluir borde en el tamaño */
+  }
+  
+  /* Asignación de áreas */
+  .s1 {
+    font-family: 'Gulfs Display', sans-serif;
+    grid-area: s1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7vh;
+    line-height: 7vh;
+    color: #FF6545;
+    background-color: #FFB4CE;
+  }
+  
+  .s2 {
+    grid-area: s2;
+    background-color: #FFB4CE;
+  }
+  
+  .s3 {
+    grid-area: s3;
+    background-color: #FFF460;
+  }
+  
+  .s4 {
+    grid-area: s4;
+    background-color: #FFFFFF;
+  }
+  
+  .s5 {
+    grid-area: s5;
+    background-color: #035DFF;
+  }
+  
+  .s6 {
+    grid-area: s6;
+    background-color: #FFF460;
+  }
+  
+  .s7 {
+    grid-area: s7;
+    background-color: #000000;
+  }
+  
+  .s8 {
+    grid-area: s8;
+    background-color: #FF6541;
+  }
+  
+  .s9 {
+    grid-area: s9;
+    background-color: #FFB4CE;
+  }
   
 .menuimg {
   height: 20px;
